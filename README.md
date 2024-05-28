@@ -13,5 +13,8 @@ ConvoBot is a chatbot application designed to help you automate your conversatio
 ## Getting Started
 
 1. Clone this repository to your local machine: `git clone https://github.com/your-username/convobot.git`
-2. Install the required dependencies: `npm install` or `yarn install`
-3. Start the application: `npm start` or `yarn start`
+2. Install the required dependencies: `npm install requirements.txt`
+3. Start the application: `streamlit run ConvoBot.py`
+
+## Deployed URL:
+https://convo-bot.streamlit.app/
