@@ -16,6 +16,16 @@ rerun_button = st.button("Get Response")
 
 st.markdown("""---""")
 
+if question_input:
+    response = make_request(question_input)
+else:
+    pass
+
+if rerun_button:
+    response = make_request(question_input)
+else:
+    pass
+
 if response:
     st.write("Response:")
     st.write(response)
