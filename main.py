@@ -1,5 +1,12 @@
 import streamlit as st
-from models import get_gemini_response
+import google.generativeai as genai
+
+genai.configure(api_key="AIzaSyCywxL3BTdCMWt22qmZIxpOJVECFNbr02s")
+model = genai.GenerativeModel('gemini-1.5-pro-latest')
+
+def get_gemini_response(input):
+  response = model.generate_content([input])
+  return response.text
 
 response = ''
 
