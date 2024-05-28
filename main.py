@@ -7,8 +7,8 @@ def make_request(question_input: str):
     response = get_gemini_response(question_input)
     return response
 
-st.title("💬 Chatbot")
-st.caption("🚀 A Streamlit chatbot powered by OpenAI")
+st.title("💬 Sambot")
+st.caption("🚀 A Streamlit Sambot powered by GeminiApi")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
