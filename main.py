@@ -7,27 +7,19 @@ def make_request(question_input: str):
     response = get_gemini_response(question_input)
     return response
 
-st.title("SAM ChatGPT")
+st.title("💬 Chatbot")
+st.caption("🚀 A Streamlit chatbot powered by OpenAI")
+if "messages" not in st.session_state:
+    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
-st.markdown("""---""")
+for msg in st.session_state.messages:
+    st.chat_message(msg["role"]).write(msg["content"])
 
-question_input = st.text_area("Enter question")
-rerun_button = st.button("Get Response")
+if prompt := st.chat_input():
 
-st.markdown("""---""")
-
-if question_input:
-    response = make_request(question_input)
-else:
-    pass
-
-if rerun_button:
-    response = make_request(question_input)
-else:
-    pass
-
-if response:
-    st.write("Response:")
-    st.write(response)
-else:
-    pass
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.chat_message("user").write(prompt)
+    response = make_request(prompt)
+    msg = response
+    st.session_state.messages.append({"role": "assistant", "content": msg})
+    st.chat_message("assistant").write(msg)
