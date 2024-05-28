@@ -14,8 +14,8 @@ def make_request(question_input: str):
     response = get_gemini_response(question_input)
     return response
 
-st.title("💬 Sambot")
-st.caption("🚀 A Streamlit Sambot powered by GeminiApi")
+st.title("💬 Convo-bot")
+st.caption("🚀 A Streamlit Convo-bot powered by GeminiApi")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
