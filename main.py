@@ -16,8 +16,8 @@ rerun_button = st.button("Get Response")
 
 st.markdown("""---""")
 
-if not response:
-    st.write("Enter a question to get a response.")
+if response:
+    st.write("Response:")
+    st.write(response)
 else:
-    st.markdown(f"**Response:**")
-    st.markdown(response)
+    pass
