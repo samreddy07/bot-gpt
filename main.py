@@ -7,28 +7,17 @@ def make_request(question_input: str):
     response = get_gemini_response(question_input)
     return response
 
-
-st.header("SAM + OpenAI ChatGPT API")
-
-st.markdown("""---""")
-
-question_input = st.text_input("Enter question")
-rerun_button = st.button("Rerun")
+st.title("SAM ChatGPT")
 
 st.markdown("""---""")
 
-if question_input:
-    response = make_request(question_input)
-else:
-    pass
+question_input = st.text_area("Enter question")
+rerun_button = st.button("Get Response")
 
-if rerun_button:
-    response = make_request(question_input)
-else:
-    pass
+st.markdown("""---""")
 
-if response:
-    st.write("Response:")
-    st.write(response)
+if not response:
+    st.write("Enter a question to get a response.")
 else:
-    pass
+    st.markdown(f"**Response:**")
+    st.markdown(response)
