@@ -15,7 +15,7 @@ def make_request(question_input: str):
     return response
 
 st.title("💬 Convo-bot")
-st.caption("🚀 A Streamlit Convo-bot powered by GeminiApi")
+st.caption("🚀 A Streamlit Bot-GPT powered by GeminiApi")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
