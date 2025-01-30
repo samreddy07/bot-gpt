@@ -17,4 +17,4 @@ ConvoBot is a chatbot application designed to help you automate your conversatio
 3. Start the application: `streamlit run ConvoBot.py`
 
 ## Deployed URL:
-https://convo-bot.streamlit.app/
+https://bot-gpt.streamlit.app/
